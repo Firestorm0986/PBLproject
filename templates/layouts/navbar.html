@@ -2,8 +2,8 @@
 This HTML is setup as a fragment allowing it to be "included" by other HTML files via Jinja2
 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <img src="{{ url_for('static', filename='assets/ncs_logo.png') }}" width="50" height="50" class="d-inline-block align-center" alt="">
-    <a class="navbar-brand" href="https://csp.nighthawkcodingsociety.com/">{{basename}}</a>
+    <img src="{{ url_for('static', filename='assets/Practicenexus.png') }}" width="50" height="50" class="d-inline-block align-center" alt="">
+    <a class="navbar-brand" href="index.html">{{basename}}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,13 +12,14 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <!-- url_for is a Jinja2 pre-processor that finds route from function name (def) -->
             <a class="nav-link" href={{ url_for('index') }}>Home</a>
             <a class="nav-link" href={{ url_for('stub') }}>Stub</a>
+            <a class="nav-link" href={{ url_for('test') }}>test</a>
         </div>
     </div>
     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Projects
+                    Practice
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li><a class="dropdown-item" href={{ url_for('projects.portfolio') }}>Portfolio</a></li>

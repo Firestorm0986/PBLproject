@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+{% set project = "test" %}
+
+{% block body %}
+    <style>
+        .container{
+            height: 500px;
+            width: 300px;
+            color: black;
+            border: 5px solid black;
+        }
+
+        .black {
+            background-color: #fff;
+        }
+
+        .test-text{
+            color: black;
+        }
+
+    </style>
+    <div class="container black">
+        <h1 class="test-text">TEST</h1>
+    </div>
+{% endblock %}
