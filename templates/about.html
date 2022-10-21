@@ -1,0 +1,84 @@
+{% extends "layouts/base-copy.html" %}
+{% set project = "about" %}
+
+{% block body %}
+    <style>
+        .paddingleft{
+            float: left;
+            width: 5%;
+            color: white;
+            background-color: white;
+        }
+        
+        .paddingmid{
+            float: left;
+            width: 10%;
+            color: white;
+            background-color: white;
+        }
+
+        .leftcolumn{
+            float: left;
+            width: 45%;
+            color: black;
+            border: 5px solid black;
+            background-color: rgb(220, 202, 152);
+        }
+
+        .white-text{
+            color: white;
+        }
+        
+        .black-text{
+            color: black;
+            text-align: center;
+        }
+
+        .member-title{
+            margin-top: 20px;
+            float: left;
+            width: 30%;
+            background-color: rgb(197, 220, 18);
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+
+        .member-blocks{
+            margin-top: 60px;
+            width: 30%;
+            background-color: aquamarine;
+            border: 4px solid greenyellow;
+        }
+
+        .dnlogo{
+            width: 320px;
+            height: 320px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            margin-bottom: 25px;
+        }
+
+
+    </style>
+    <div class="paddingleft">
+        <p class="white-text">Hello</p>
+    </div>
+    <div class="leftcolumn">
+        <h1 class="black-text">About Us</h1>
+        <p class="black-text">We are TAAL Development team.</p>
+        <p class="black-text">We are made of Del Norte High School students.</p>
+        <p class="black-text">2 seniors, 1 junior, and 1 sophomore.</p>
+        <p class="black-text">We have developed Practice Nexus for our Computer Science Principles project.</p>
+        <p class="black-text">We are in Period 4 AP Computer Science Principles with Mr. Yeung.</p>
+        <img class="dnlogo" src="{{ url_for('static', filename='assets/dnlogo.jpeg') }}" alt="Del Norte High School">
+    </div>
+    <div class="paddingmid">
+        <p class="white-text">Hello again</p>
+    </div>
+    <div class="member-title">
+        <h1 class="black-text">Our Dev Team</h1>
+    </div>
+
+{% endblock %}
