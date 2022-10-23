@@ -1,12 +1,48 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/base-copy.html" %}
 {% set project = "Home" %}
 
 {% block body %}
+    <style>
+        html, body {
+            font-family: 'Roboto Flex', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #fee3c3;
+            scroll-behavior: smooth;
+        }
+
+        .text-title {
+            color: black
+        }
+
+        .position-title-y{
+            padding-top:6rem;
+            padding-bottom:3rem;
+        }
+
+        .position-title-x{
+            padding-right:3rem;
+            padding-left:3rem;
+        }
+
+        .auto{
+            margin-right:auto;
+            margin-left:auto;
+        }
+        .position-subtitle-y{
+            padding-top:3rem;
+            padding-bottom:3rem;
+        }
+    </style>
     <!-- Start of body content specific to page -->
-    <div class="px-5 py-5 mx-auto">
-        <h1 class="text-white"><strong>Python Home Page</strong></h1>
-        <h1 class="text-white">TEST</h1>
-        <div class="row">
+    <div class="position-title-x position-title-y auto">
+        <center> <h1 class="text-title">SAT<strong> Practice</strong></h1> </center>
+        <center><h1 class="text-title"><strong>Starts</strong> Here!</h1></center>
+        <div class="position-title-x position-subtitle-y auto">
+            <center><h5 class="text-title">Practice your skills here!</h5>
+        </div>
+        <div class="row position-title-y">
             <div class="col-4">
                 <div class="card">
                     <img class="card-img-top" src="{{ url_for('static', filename='assets/python.jpeg') }}" alt="Python Development" height="250">
