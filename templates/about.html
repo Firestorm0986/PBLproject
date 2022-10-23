@@ -1,0 +1,179 @@
+{% extends "layouts/base-copy.html" %}
+{% set project = "about" %}
+
+{% block body %}
+    <style>
+        body {
+            background:rgb(220, 202, 152);
+
+        }
+
+        .paddingleft{
+            float: left;
+            width: 5%;
+            color: rgb(220, 202, 152);
+            background-color: rgb(220, 202, 152);
+        }
+        
+        .paddingmid{
+            float: left;
+            width: 10%;
+            height: 1500px;
+            color: rgb(220, 202, 152);
+            background-color: rgb(220, 202, 152);
+        }
+
+        .leftcolumn{
+            float: left;
+            width: 45%;
+            color: black;
+            border: 5px solid black;
+            background-color: rgb(220, 202, 152);
+            border-radius: 10px;
+        }
+
+        .blend-text{
+            color: rgb(220, 202, 152);
+        }
+        
+        .black-text{
+            color: black;
+            text-align: center;
+        }
+
+        .member-title{
+            margin-top: 20px;
+            float: left;
+            width: 30%;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+
+        .member-blocks {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            margin-top: 20px;
+            float: left;
+            width: 30%;
+            background-color: rgb(92, 156, 216);
+        }
+
+        .member-image {
+            background-color: blueviolet;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            
+            float: left;
+            
+        }
+
+        .member-head {
+            position: relative;
+            top: 0;
+            width: 60%;
+            float: left;
+            margin: 10px;
+            display: inline;
+        }
+
+        .member-description {
+            display: block;
+            margin: 10px;
+            width: 30%;
+        }
+
+        .member-description2 {
+            display: block;
+            margin: 10px;
+            width: 100%;
+        }
+
+        .button {
+            margin: 0 auto;
+            border: none;
+            color: goldenrod;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .button:hover {
+            background-color: #000000;
+            color: white;
+        }
+        
+        .dnlogo{
+            width: 320px;
+            height: 320px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            margin-bottom: 25px;
+            border-radius: 10px;
+        }
+
+
+    </style>
+    <div class="aboutbackground"></div>
+    <div class="paddingleft">
+        <p class="blend-text">Hello</p>
+    </div>
+    <div class="leftcolumn">
+        <h1 class="black-text">About Us</h1>
+        <p class="black-text">We are TAAL Development team.</p>
+        <p class="black-text">We are made of Del Norte High School students.</p>
+        <p class="black-text">2 seniors, 1 junior, and 1 sophomore.</p>
+        <p class="black-text">We have developed Practice Nexus for our Computer Science Principles project.</p>
+        <p class="black-text">We are in Period 4 AP Computer Science Principles with Mr. Yeung.</p>
+        <img class="dnlogo" src="{{ url_for('static', filename='assets/dnlogo.jpeg') }}" alt="Del Norte High School">
+    </div>
+    <div class="paddingmid">
+        <p class="blend-text">Hello again</p>
+    </div>
+    <div class="member-title">
+        <h1 class="black-text">Our Dev Team</h1>
+        
+    </div>
+    <div class="member-blocks">
+        <div class="member-image"></div>
+            <h3 class="member-head">Scrum Master: Arnav</h3>
+                <p class="member-description">DNHS Senior</p>
+                <p class="member-description2">Enjoys eating, sleeping, watching sports and movies, hanging out with friends</p>
+                <button class="button"><a href="https://youtube.com/">Fastpages</a></button>
+    </div>
+
+    <div class="member-blocks">
+        <div class="member-image"></div>
+            <h3 class="member-head">Frontend Developer: Aditya</h3>
+                <p class="member-description">DNHS Junior</p>
+                <p class="member-description2">Enjoys code, code, code</p>
+                <button class="button"><a href="https://youtube.com/">Fastpages</a></button>
+    </div>
+
+    <div class="member-blocks">
+        <div class="member-image"></div>
+            <h3 class="member-head">DevOps Engineer: Luke</h3>
+                <p class="member-description">DNHS Senior</p>
+                <p class="member-description2">Enjoys code, code, code</p>
+                <button class="button"><a href="https://youtube.com/">Fastpages</a></button>
+    </div>
+
+    <div class="member-blocks">
+        <div class="member-image"></div>
+            <h3 class="member-head">Backend Developer: Tay</h3>
+                <p class="member-description">DNHS Sophomore</p>
+                <p class="member-description2">Enjoys code, code, code</p>
+                <button class="button"><a href="https://youtube.com/">Fastpages</a></button>
+    </div>
+
+{% endblock %}
