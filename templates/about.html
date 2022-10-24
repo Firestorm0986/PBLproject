@@ -4,7 +4,7 @@
 {% block body %}
     <style>
         body {
-            background:rgb(220, 202, 152);
+            background:#fee3c3;
 
         }
 
@@ -12,7 +12,7 @@
             float: left;
             width: 5%;
             color: rgb(220, 202, 152);
-            background-color: rgb(220, 202, 152);
+            background-color: #fee3c3;
         }
         
         .paddingmid{
@@ -20,7 +20,7 @@
             width: 10%;
             height: 1500px;
             color: rgb(220, 202, 152);
-            background-color: rgb(220, 202, 152);
+            background-color: #fee3c3;
         }
 
         .leftcolumn{
@@ -33,7 +33,7 @@
         }
 
         .blend-text{
-            color: rgb(220, 202, 152);
+            color: #fee3c3;
         }
         
         .black-text{
@@ -145,35 +145,35 @@
         
     </div>
     <div class="member-blocks">
-        <div class="member-image"></div>
+        <img class="member-image" src="{{ url_for('static', filename='assets/a.png') }}">
             <h3 class="member-head">Scrum Master: Arnav</h3>
                 <p class="member-description">DNHS Senior</p>
                 <p class="member-description2">Enjoys eating, sleeping, watching sports and movies, hanging out with friends</p>
-                <button class="button"><a href="https://youtube.com/">Fastpages</a></button>
+                <button class="button"><a href="https://muffinman1287.github.io/FirstFastPage/">Fastpages</a></button>
     </div>
 
     <div class="member-blocks">
-        <div class="member-image"></div>
+        <img class="member-image" src="{{ url_for('static', filename='assets/a2.jpeg') }}">
             <h3 class="member-head">Frontend Developer: Aditya</h3>
                 <p class="member-description">DNHS Junior</p>
-                <p class="member-description2">Enjoys code, code, code</p>
-                <button class="button"><a href="https://youtube.com/">Fastpages</a></button>
+                <p class="member-description2">Enjoys spending time with friends and family, eating chocolate</p>
+                <button class="button"><a href="https://firestorm0986.github.io/CSPrepository2/">Fastpages</a></button>
     </div>
 
     <div class="member-blocks">
-        <div class="member-image"></div>
+        <img class="member-image" src="{{ url_for('static', filename='assets/l.jpeg') }}">
             <h3 class="member-head">DevOps Engineer: Luke</h3>
                 <p class="member-description">DNHS Senior</p>
-                <p class="member-description2">Enjoys code, code, code</p>
-                <button class="button"><a href="https://youtube.com/">Fastpages</a></button>
+                <p class="member-description2">Enjoys water polo, Magic: The Gathering</p>
+                <button class="button"><a href="https://luke-angelini.github.io/Luke1/page2/">Fastpages</a></button>
     </div>
 
     <div class="member-blocks">
-        <div class="member-image"></div>
+        <img class="member-image" src="{{ url_for('static', filename='assets/t.jpeg') }}">
             <h3 class="member-head">Backend Developer: Tay</h3>
                 <p class="member-description">DNHS Sophomore</p>
-                <p class="member-description2">Enjoys code, code, code</p>
-                <button class="button"><a href="https://youtube.com/">Fastpages</a></button>
+                <p class="member-description2">Enjoys running, reading, watching TV</p>
+                <button class="button"><a href="https://taykimmy.github.io/VSCodeProject/">Fastpages</a></button>
     </div>
 
 {% endblock %}
