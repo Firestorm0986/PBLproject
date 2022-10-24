@@ -21,9 +21,9 @@ def page_not_found(e):
 def index():
     return render_template("index.html")
 
-@app.route('/stub/')  # connects /stub/ URL to stub() function
+@app.route('/quiz/')  # connects /stub/ URL to stub() function
 def stub():
-    return render_template("stub.html")
+    return render_template("quiz.html")
 
 @app.route('/test/')
 def test():
