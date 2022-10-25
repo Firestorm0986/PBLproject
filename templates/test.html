@@ -21,15 +21,19 @@
     </style>
     <script>
         const apiurl = "https://opentdb.com/api.php?amount=10&category=19&type=multiple"
-
-        fetch(apiurl)
-        .then(response => {
-            response.json().then(data => {
-                console.log(data)
-                console.log(data.results)
-                QuestionCreate(data)
+        window.onload = APIsync()
+        
+        function APIsync(){
+            fetch(apiurl)
+            .then(response => {
+                response.json().then(data => {
+                    console.log(data)
+                    console.log(data.results)
+                    QuestionCreate(data)
             })
         })
+        }
+        
         function QuestionCreate(data){
             document.getElementById("question1").innerHTML = data.results[0].question;
             document.getElementById("choice1.1").innerHTML = data.results[0].correct_answer;
