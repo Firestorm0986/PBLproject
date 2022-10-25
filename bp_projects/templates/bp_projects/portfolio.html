@@ -1,7 +1,25 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
-{% extends "layouts/project.html" %}
+{% extends "layouts/base-copy.html" %}
 
 <!-- Setting up variables to customize "project" details to be specific to index page -->
 {% set project = "Portfolio" %}
-{% set overview = "https://nighthawkcodingsociety.com/projectsearch/details/Flask%20Portfolio%20Starter" %}
-{% set repo = "https://github.com/nighthawkcoders/flask_portfolio/" %}
+
+{% block body %}
+    <style>
+        html, body {
+            font-family: 'Roboto Flex', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #fee3c3;
+            scroll-behavior: smooth;
+        }
+        .position-title-y {
+            padding-top: 3rem;
+            padding-bottom: 5rem;
+        }
+    </style>
+    <div class="position-title-y">
+    <center> <h1 class="text-title"><strong>Math Quiz</strong></h1> </center>
+    </div>
+{% endblock %}
