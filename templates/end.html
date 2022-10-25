@@ -1,0 +1,39 @@
+<!-- Extending the project layout, as this file will do minor customizations -->
+{% extends "layouts/base-copy.html" %}
+
+<!-- Setting up variables to customize "project" details to be specific to index page -->
+{% set project = "endscr" %}
+
+{% block body %}
+    <style>
+        html, body {
+            font-family: 'Roboto Flex', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #fee3c3;
+            scroll-behavior: smooth;
+        }
+        .position-title-y {
+            padding-top: 3rem;
+            padding-bottom: 5rem;
+        }
+
+        .result {
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+            text-align: center
+        }
+
+    </style>
+    <div class="position-title-y">
+        <h1 class="text-title"><strong>Results</strong></h1>
+    </div>
+    <div class="result">
+        Here are your results!
+
+        <a href={{ url_for('index') }} class="btn btn-home">Back to the Homepage</a>
+    </div>
+{% endblock %}

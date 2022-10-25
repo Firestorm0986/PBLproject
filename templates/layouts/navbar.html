@@ -23,6 +23,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
             <a class="nav-link" href={{ url_for('index') }}>Home</a>
             <a class="nav-link" href={{ url_for('test') }}>test</a>
             <a class="nav-link" href={{ url_for('about') }}>About</a>
+            <a class="nav-link" href={{ url_for('feedback') }}>Feedback</a>
         </div>
     </div>
     <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
@@ -33,7 +34,7 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                     <li><a class="dropdown-item" href={{ url_for('projects.portfolio') }}>Math Quiz</a></li>
-                    <li><a class="dropdown-item" href={{ url_for('projects.kangaroos') }}>Geogrophy Quiz</a></li>
+                    <li><a class="dropdown-item" href={{ url_for('projects.kangaroos') }}>Geography Quiz</a></li>
                 </ul>
             </li>
         </ul>
