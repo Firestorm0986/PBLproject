@@ -18,6 +18,18 @@
             color: black;
         }
 
+        .result {
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+            text-align: center
+        }
+
+        .class-btn {
+            width: 100%
+        }
+
     </style>
     <script>
         const apiurl = "https://opentdb.com/api.php?amount=10&category=19&type=multiple"
@@ -51,5 +63,12 @@
         <p id="choice1.3"></p>
         <p id="choice1.4"></p>
 
+    </div>
+    <div class="result">
+        Here are your results!
+        <div class="class-btn">
+            <a href={{ url_for('index') }} class="btn btn-primary">Back to the Homepage</a>
+        </div>
+        
     </div>
 {% endblock %}
