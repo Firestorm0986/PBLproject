@@ -19,7 +19,33 @@
         }
 
     </style>
+    <script>
+        const apiurl = "https://opentdb.com/api.php?amount=10&category=19&type=multiple"
+
+        fetch(apiurl)
+        .then(response => {
+            response.json().then(data => {
+                console.log(data)
+                console.log(data.results)
+                QuestionCreate(data)
+            })
+        })
+        function QuestionCreate(data){
+            document.getElementById("question1").innerHTML = data.results[0].question;
+            document.getElementById("choice1.1").innerHTML = data.results[0].correct_answer;
+            document.getElementById("choice1.2").innerHTML = data.results[0].incorrect_answers[0];
+            document.getElementById("choice1.3").innerHTML = data.results[0].incorrect_answers[1];
+            document.getElementById("choice1.4").innerHTML = data.results[0].incorrect_answers[2];
+            
+        }
+    </script>
     <div class="container black">
-        <h1 class="test-text">TEST</h1>
+        <h1 class="test-text">We are testing our questions!</h1>
+        <h2 id="question1"></h2>
+        <p id="choice1.1"></p>
+        <p id="choice1.2"></p>
+        <p id="choice1.3"></p>
+        <p id="choice1.4"></p>
+
     </div>
 {% endblock %}
