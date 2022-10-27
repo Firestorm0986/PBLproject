@@ -35,6 +35,10 @@ def test():
 def about():
     return render_template("about.html")
 
+@app.route('/feedback/')
+def feedback():
+    return render_template("feedback.html")
+
 # this runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
