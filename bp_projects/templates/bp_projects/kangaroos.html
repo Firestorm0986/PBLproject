@@ -1,6 +1,5 @@
 <!-- Extending the project layout, as this file will do minor customizations -->
 {% extends "layouts/base-copy.html" %}
-
 <!-- Setting up variables to customize "project" details to be specific to index page -->
 {% set project = "Portfolio" %}
 
@@ -15,11 +14,187 @@
             scroll-behavior: smooth;
         }
         .position-title-y {
-            padding-top: 3rem;
-            padding-bottom: 5rem;
+            padding-top:3rem;
+            padding-bottom:3rem;
+        }
+        .position-question {
+            padding-top:1rem;
+            padding-bottom:3rem;
+        }
+        .position-back-card{
+            height: 400px;
+            width: 1500px;
+            border: 2px solid black;
+            background-color: #fff;
+            margin:2rem;
+            border-radius: 25px;
+        }
+        .question-text{
+            color:black;
+            margin-bottom:.5rem;
+        }
+        .question-card{
+            height:50px;
+            width: 25%;
+            border:1px solid black;
+            background-color: #fff;
+            margin:1rem;
+            padding-top:1rem;
+            border-radius: 25px;
+        }
+        .question-card:hover{
+            background-color:#f7c78d;
+        }
+        .card-body{
+            flex:1 1 auto;
+            padding:1rem 1rem;
+        }
+        .score-button{
+            height:50px;
+            width:150px;
+            margin:2rem;
+            background-color: #fee3c3;
+        }
+        .score-button:hover{
+            background-color: #f7c78d;
         }
     </style>
+    <script>
+        const apiurl = "https://opentdb.com/api.php?amount=5&category=22&type=multiple"
+        window.onload = APIsync()
+        
+        function APIsync(){
+            fetch(apiurl)
+            .then(response => {
+                response.json().then(data => {
+                    console.log(data)
+                    console.log(data.results)
+                    QuestionCreate(data)
+            })
+        })
+        }
+        
+        function QuestionCreate(data){
+            document.getElementById("question1").innerHTML = data.results[0].question;
+            document.getElementById("choice1.1").innerHTML = data.results[0].correct_answer;
+            document.getElementById("choice1.2").innerHTML = data.results[0].incorrect_answers[0];
+            document.getElementById("choice1.3").innerHTML = data.results[0].incorrect_answers[1];
+            document.getElementById("choice1.4").innerHTML = data.results[0].incorrect_answers[2];
+            
+            document.getElementById("question2").innerHTML = data.results[1].question;
+            document.getElementById("choice2.1").innerHTML = data.results[1].correct_answer;
+            document.getElementById("choice2.2").innerHTML = data.results[1].incorrect_answers[0];
+            document.getElementById("choice2.3").innerHTML = data.results[1].incorrect_answers[1];
+            document.getElementById("choice2.4").innerHTML = data.results[1].incorrect_answers[2];  
+
+            document.getElementById("question3").innerHTML = data.results[2].question;
+            document.getElementById("choice3.1").innerHTML = data.results[2].correct_answer;
+            document.getElementById("choice3.2").innerHTML = data.results[2].incorrect_answers[0];
+            document.getElementById("choice3.3").innerHTML = data.results[2].incorrect_answers[1];
+            document.getElementById("choice3.4").innerHTML = data.results[2].incorrect_answers[2];  
+
+            document.getElementById("question4").innerHTML = data.results[3].question;
+            document.getElementById("choice4.1").innerHTML = data.results[3].correct_answer;
+            document.getElementById("choice4.2").innerHTML = data.results[3].incorrect_answers[0];
+            document.getElementById("choice4.3").innerHTML = data.results[3].incorrect_answers[1];
+            document.getElementById("choice4.4").innerHTML = data.results[3].incorrect_answers[2];
+
+            document.getElementById("question5").innerHTML = data.results[4].question;
+            document.getElementById("choice5.1").innerHTML = data.results[4].correct_answer;
+            document.getElementById("choice5.2").innerHTML = data.results[4].incorrect_answers[0];
+            document.getElementById("choice5.3").innerHTML = data.results[4].incorrect_answers[1];
+            document.getElementById("choice5.4").innerHTML = data.results[4].incorrect_answers[2];
+        }
+    </script>
+
+
     <div class="position-title-y">
-    <center> <h1 class="text-title"><strong>Geography Quiz</strong></h1> </center>
+        <center> <h1 class="text-title"><strong>Geography Quiz</strong></h1> </center>
     </div>
+    <center><div class="position-back-card position-question">
+        <div class="card-body">
+            <h1 class="question-text" id="question1"></h1>
+            <div class="question-card">
+                <p id="choice1.1"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice1.2"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice1.3"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice1.4"></p> 
+            </div>
+        </div>
+    </div>
+    <center><div class="position-back-card position-question">
+        <div class="card-body">
+            <h1 class="question-text" id="question2"></h1>
+            <div class="question-card">
+                <p id="choice2.1"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice2.2"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice2.3"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice2.4"></p> 
+            </div>
+        </div>
+    </div>
+    <center><div class="position-back-card position-question">
+        <div class="card-body">
+            <h1 class="question-text" id="question3"></h1>
+            <div class="question-card">
+                <p id="choice3.1"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice3.2"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice3.3"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice3.4"></p> 
+            </div>
+        </div>
+    </div>
+    <center><div class="position-back-card position-question">
+        <div class="card-body">
+            <h1 class="question-text" id="question4"></h1>
+            <div class="question-card">
+                <p id="choice4.1"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice4.2"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice4.3"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice4.4"></p> 
+            </div>
+        </div>
+    </div>
+    <center><div class="position-back-card position-question">
+        <div class="card-body">
+            <h1 class="question-text" id="question5"></h1>
+            <div class="question-card">
+                <p id="choice5.1"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice5.2"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice5.3"></p> 
+            </div>
+            <div class="question-card">
+                <p id="choice5.4"></p> 
+            </div>
+        </div>
+    </div>
+    <center><button class="score-button">score</button></center>
 {% endblock %}
