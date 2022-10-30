@@ -105,8 +105,45 @@
             document.getElementById("choice5.3").innerHTML = data.results[4].incorrect_answers[1];
             document.getElementById("choice5.4").innerHTML = data.results[4].incorrect_answers[2];
         }
+
+
         function answerclick(){
-            document.getElementById("correct").innerHTML = "correct"
+            document.getElementById("correct1").innerHTML = "correct";
+            document.getElementById("wrong1").innerHTML = "wrong";
+            document.getElementById("wrong2").innerHTML = "wrong";
+            document.getElementById("wrong3").innerHTML = "wrong";
+        }
+
+
+        function answerclick2(){
+            document.getElementById("correct2").innerHTML = "correct";
+            document.getElementById("wrong1.1").innerHTML = "wrong";
+            document.getElementById("wrong2.1").innerHTML = "wrong";
+            document.getElementById("wrong3.1").innerHTML = "wrong";
+        }
+
+
+        function answerclick3(){
+            document.getElementById("correct3").innerHTML = "correct";
+            document.getElementById("wrong1.2").innerHTML = "wrong";
+            document.getElementById("wrong2.2").innerHTML = "wrong";
+            document.getElementById("wrong3.2").innerHTML = "wrong";
+        }
+
+
+        function answerclick4(){
+            document.getElementById("correct4").innerHTML = "correct";
+            document.getElementById("wrong1.3").innerHTML = "wrong";
+            document.getElementById("wrong2.3").innerHTML = "wrong";
+            document.getElementById("wrong3.3").innerHTML = "wrong";
+        }
+
+
+        function answerclick5(){
+            document.getElementById("correct5").innerHTML = "correct";
+            document.getElementById("wrong1.4").innerHTML = "wrong";
+            document.getElementById("wrong2.4").innerHTML = "wrong";
+            document.getElementById("wrong3.4").innerHTML = "wrong";
         }
     </script>
 
@@ -117,33 +154,33 @@
     <center><div class="position-back-card position-question">
         <div class="card-body">
             <h1 class="question-text" id="question1"></h1>
-            <div class="question-card">
-                <p id="choice1.1"></p> 
+            <div class="question-card" id="wrong3" onclick="answerclick()">
+                <p id="choice1.4"></p> 
             </div>
-            <div class="question-card">
+            <div class="question-card" id="wrong1" onclick="answerclick()">
                 <p id="choice1.2"></p> 
             </div>
-            <div class="question-card">
+            <div class="question-card" id="wrong2" onclick="answerclick()">
                 <p id="choice1.3"></p> 
             </div>
-            <div class="question-card">
-                <p id="choice1.4"></p> 
+            <div class="question-card" id="correct1" onclick="answerclick()">
+                <p id="choice1.1"></p> 
             </div>
         </div>
     </div>
     <center><div class="position-back-card position-question">
         <div class="card-body">
             <h1 class="question-text" id="question2"></h1>
-            <div class="question-card" id="correct" onclick="answerclick()">
-                <p id="choice2.1"></p> 
-            </div>
-            <div class="question-card">
+            <div class="question-card" id="wrong1.1" onclick="answerclick2()">
                 <p id="choice2.2"></p> 
             </div>
-            <div class="question-card">
+            <div class="question-card" id="correct2" onclick="answerclick2()">
+                <p id="choice2.1"></p> 
+            </div>
+            <div class="question-card" id="wrong2.1" onclick="answerclick2()">
                 <p id="choice2.3"></p> 
             </div>
-            <div class="question-card">
+            <div class="question-card" id="wrong3.1" onclick="answerclick2()">
                 <p id="choice2.4"></p> 
             </div>
         </div>
@@ -151,16 +188,16 @@
     <center><div class="position-back-card position-question">
         <div class="card-body">
             <h1 class="question-text" id="question3" ></h1>
-            <div class="question-card">
-                <p id="choice3.1"></p> 
-            </div>
-            <div class="question-card">
-                <p id="choice3.2"></p> 
-            </div>
-            <div class="question-card">
+            <div class="question-card" id="wrong2.2" onclick="answerclick3()">
                 <p id="choice3.3"></p> 
             </div>
-            <div class="question-card">
+            <div class="question-card" id="wrong1.2" onclick="answerclick3()">
+                <p id="choice3.2"></p> 
+            </div>
+            <div class="question-card" id="correct3" onclick="answerclick3()">
+                <p id="choice3.1"></p> 
+            </div>
+            <div class="question-card" id="wrong3.2" onclick="answerclick3()">
                 <p id="choice3.4"></p> 
             </div>
         </div>
@@ -168,16 +205,16 @@
     <center><div class="position-back-card position-question">
         <div class="card-body">
             <h1 class="question-text" id="question4"></h1>
-            <div class="question-card">
+            <div class="question-card" id="correct4" onclick="answerclick4()">
                 <p id="choice4.1"></p> 
             </div>
-            <div class="question-card">
+            <div class="question-card" id="wrong1.3" onclick="answerclick4()">
                 <p id="choice4.2"></p> 
             </div>
-            <div class="question-card">
+            <div class="question-card" id="wrong2.3" onclick="answerclick4()">
                 <p id="choice4.3"></p> 
             </div>
-            <div class="question-card">
+            <div class="question-card" id="wrong3.3" onclick="answerclick4()">
                 <p id="choice4.4"></p> 
             </div>
         </div>
@@ -185,17 +222,18 @@
     <center><div class="position-back-card position-question">
         <div class="card-body">
             <h1 class="question-text" id="question5"></h1>
-            <div class="question-card">
-                <p id="choice5.1"></p> 
+            <div class="question-card" id="wrong3.4" onclick="answerclick5()">
+                <p id="choice5.4"></p> 
             </div>
-            <div class="question-card">
+            <div class="question-card" id="wrong1.4" onclick="answerclick5()">
                 <p id="choice5.2"></p> 
             </div>
-            <div class="question-card">
+            <div class="question-card" id="wrong2.4" onclick="answerclick5()">
                 <p id="choice5.3"></p> 
             </div>
-            <div class="question-card">
-                <p id="choice5.4"></p> 
+
+            <div class="question-card" id="correct5" onclick="answerclick5()">
+                <p id="choice5.1"></p> 
             </div>
         </div>
     </div>
