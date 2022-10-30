@@ -105,6 +105,9 @@
             document.getElementById("choice5.3").innerHTML = data.results[4].incorrect_answers[1];
             document.getElementById("choice5.4").innerHTML = data.results[4].incorrect_answers[2];
         }
+        function answerclick(){
+            document.getElementById("correct").innerHTML = "correct"
+        }
     </script>
 
 
@@ -131,7 +134,7 @@
     <center><div class="position-back-card position-question">
         <div class="card-body">
             <h1 class="question-text" id="question2"></h1>
-            <div class="question-card">
+            <div class="question-card" id="correct" onclick="answerclick()">
                 <p id="choice2.1"></p> 
             </div>
             <div class="question-card">
@@ -147,7 +150,7 @@
     </div>
     <center><div class="position-back-card position-question">
         <div class="card-body">
-            <h1 class="question-text" id="question3"></h1>
+            <h1 class="question-text" id="question3" ></h1>
             <div class="question-card">
                 <p id="choice3.1"></p> 
             </div>
