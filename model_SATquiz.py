@@ -21,12 +21,6 @@ def initSAT():
     for item in SAT_questions:
         SAT_data.append({"id": item_id, "question": item})
         item_id += 1
-    # prime some haha responses
-    for i in range(10):
-        id = getRandomQuestion()['id']
-    # prime some haha responses
-    for i in range(5):
-        id = getRandomQuestion()['id']
         
 # Return all jokes from jokes_data
 def getSAT():
