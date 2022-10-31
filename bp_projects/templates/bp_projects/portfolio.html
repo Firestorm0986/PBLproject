@@ -145,6 +145,12 @@
             document.getElementById("wrong2.4").innerHTML = "wrong";
             document.getElementById("wrong3.4").innerHTML = "wrong";
         }
+
+
+        let score = 0;
+        function ScoreCalculator(){
+            score = score + 1;
+        }
     </script>
 
 
@@ -238,4 +244,21 @@
         </div>
     </div>
     <center><button class="score-button">score</button></center>
+        <div class="score">
+            <div id="correct1" onclick="ScoreCalculator()">
+            </div>
+
+            <div id="correct2" onclick="ScoreCalculator()">
+            </div>
+
+            <div id="correct3" onclick="ScoreCalculator()">
+            </div>
+
+            <div id="correct4" onclick="ScoreCalculator()">
+            </div>
+
+            <div id="correct5" onclick="ScoreCalculator()">
+            </div>
+            
+        </div>
 {% endblock %}
