@@ -50,3 +50,23 @@ if __name__ == "__main__":
     url = server + "/api/SATquiz"
     responses = []  # responses list
 
+    count_response = requests.get(url+"/count")
+    count_json = count_response.json()
+    count = count_json['count']
+
+    num = str(random.randint(0, count-1)) # test a random record
+    responses.append(
+        requests.get(url+"/"+num)  # read joke by id
+        ) 
+    
+    responses.append(
+        requests.get(url+"/random")  # read a random joke
+        ) 
+
+    # cycle through responses
+    for response in responses:
+        print(response)
+        try:
+            print(response.json())
+        except:
+            print("unknown error")
