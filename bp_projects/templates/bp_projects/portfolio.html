@@ -155,24 +155,24 @@
             document.getElementById("wrong3.4").innerHTML = "wrong";
         }
 
-
+        
         const score = 0;
-        function ScoreCalculator(answer){
-            if (answer == 'correct1') {
-                score += 1;
-            }
-            if (answer == 'correct2') {
-                score += 1;
-            }
-            if (answer == 'correct3') {
-                score += 1;
-            }
-            if (answer == 'correct4') {
-                score += 1;
-            }
-            if (answer == 'correct5') {
-                score += 1;
-            }
+        onEvent("choice1.1",  "click", function( ) {
+            score = score + 1;
+        });
+        onEvent("choice2.1",  "click", function( ) {
+            score = score + 1;
+        });
+        onEvent("choice3.1",  "click", function( ) {
+            score = score + 1;
+        });
+        onEvent("choice4.1",  "click", function( ) {
+            score = score + 1;
+        });
+        onEvent("choice5.1",  "click", function( ) {
+            score = score + 1;
+        });
+        function ScoreCalculator(){
             document.getElementById("score").innerHTML = "Your score is " + score + "/5";
             document.getElementById("score").className = "score-tell";
         }
