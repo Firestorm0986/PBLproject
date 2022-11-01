@@ -52,11 +52,20 @@
         .score-button{
             height:50px;
             width:150px;
-            margin:2rem;
+            margin-top:1rem;
+            margin-bottom:1rem;
             background-color: #fee3c3;
         }
         .score-button:hover{
             background-color: #f7c78d;
+        }
+        .score-tell {
+            height:25px;
+            width:150px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            background-color: #f5f4f2;
+            border:1px solid black;
         }
     </style>
     <script>
@@ -147,9 +156,25 @@
         }
 
 
-        let score = 0;
-        function ScoreCalculator(){
-            score = score + 1;
+        const score = 0;
+        function ScoreCalculator(answer){
+            if (answer == 'correct1') {
+                score += 1;
+            }
+            if (answer == 'correct2') {
+                score += 1;
+            }
+            if (answer == 'correct3') {
+                score += 1;
+            }
+            if (answer == 'correct4') {
+                score += 1;
+            }
+            if (answer == 'correct5') {
+                score += 1;
+            }
+            document.getElementById("score").innerHTML = "Your score is " + score + "/5";
+            document.getElementById("score").className = "score-tell";
         }
     </script>
 
@@ -170,7 +195,7 @@
                 <p id="choice1.3"></p> 
             </div>
             <div class="question-card" id="correct1" onclick="answerclick()">
-                <p id="choice1.1"></p> 
+                <p id="choice1.1" value="correct1"></p> 
             </div>
         </div>
     </div>
@@ -181,7 +206,7 @@
                 <p id="choice2.2"></p> 
             </div>
             <div class="question-card" id="correct2" onclick="answerclick2()">
-                <p id="choice2.1"></p> 
+                <p id="choice2.1" value="correct2"></p> 
             </div>
             <div class="question-card" id="wrong2.1" onclick="answerclick2()">
                 <p id="choice2.3"></p> 
@@ -201,7 +226,7 @@
                 <p id="choice3.2"></p> 
             </div>
             <div class="question-card" id="correct3" onclick="answerclick3()">
-                <p id="choice3.1"></p> 
+                <p id="choice3.1" value="correct3"></p> 
             </div>
             <div class="question-card" id="wrong3.2" onclick="answerclick3()">
                 <p id="choice3.4"></p> 
@@ -212,7 +237,7 @@
         <div class="card-body">
             <h1 class="question-text" id="question4"></h1>
             <div class="question-card" id="correct4" onclick="answerclick4()">
-                <p id="choice4.1"></p> 
+                <p id="choice4.1" value="correct4"></p> 
             </div>
             <div class="question-card" id="wrong1.3" onclick="answerclick4()">
                 <p id="choice4.2"></p> 
@@ -239,26 +264,10 @@
             </div>
 
             <div class="question-card" id="correct5" onclick="answerclick5()">
-                <p id="choice5.1"></p> 
+                <p id="choice5.1" value="correct5"></p> 
             </div>
         </div>
     </div>
-    <center><button class="score-button">score</button></center>
-        <div class="score">
-            <div id="correct1" onclick="ScoreCalculator()">
-            </div>
-
-            <div id="correct2" onclick="ScoreCalculator()">
-            </div>
-
-            <div id="correct3" onclick="ScoreCalculator()">
-            </div>
-
-            <div id="correct4" onclick="ScoreCalculator()">
-            </div>
-
-            <div id="correct5" onclick="ScoreCalculator()">
-            </div>
-            
-        </div>
+    <center><button class="score-button" id="scorebutton" onclick="ScoreCalculator()">Score</button></center>
+        <div id="score"></div>
 {% endblock %}
