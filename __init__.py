@@ -4,6 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from model_jokes import initJokes
 from model_SATquiz import initSAT
+from model_rankings import initRankings
+from model_generators import initfact
 
 """
 These object can be used throughout project.
@@ -28,3 +30,11 @@ def activate_job():
 @app.before_first_request
 def activate_thing():
     initSAT()
+
+@app.before_first_request
+def activate_thing():
+    initRankings()
+
+@app.before_first_request
+def activate_thing():
+    initfact()
