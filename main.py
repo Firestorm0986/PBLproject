@@ -6,7 +6,7 @@ from api.joke import joke_api # Blueprint import api definition
 from api.covid import covid_api # Blueprint import api definition.
 from api.SATquiz import SATquiz_api
 from api.ranking import ranking_api
-from api.generator import generate_api
+from api.generater import generate_api
 
 from bp_projects.projects import app_projects # Blueprint directory import projects definition
 

@@ -5,7 +5,7 @@ from flask_migrate import Migrate
 from model_jokes import initJokes
 from model_SATquiz import initSAT
 from model_rankings import initRankings
-from model_generators import initfact
+from model_generaters import initfact
 
 """
 These object can be used throughout project.
