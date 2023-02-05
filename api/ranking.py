@@ -53,7 +53,7 @@ class RankingAPI:
     api.add_resource(_UpdateDislike, '/dislike/<int:id>')
     
 if __name__ == "__main__": 
-    server = "taal.nighthawkcodingteams.cf" # run local
+    server = "http://127.0.0.1:5000/" # run local
     url = server + "/api/rankings"
     responses = []  # responses list
 
