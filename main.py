@@ -6,6 +6,7 @@ from api.joke import joke_api # Blueprint import api definition
 from api.covid import covid_api # Blueprint import api definition.
 from api.SATquiz import SATquiz_api
 from api.ranking import ranking_api
+from api.generator import generate_api
 
 from bp_projects.projects import app_projects # Blueprint directory import projects definition
 
@@ -13,6 +14,7 @@ app.register_blueprint(joke_api) # register api routes
 app.register_blueprint(covid_api) # register api routes
 app.register_blueprint(SATquiz_api)
 app.register_blueprint(ranking_api)
+app.register_blueprint(generate_api)
 app.register_blueprint(app_projects) # register api routes
 
 @app.errorhandler(404)  # catch for URL not found
