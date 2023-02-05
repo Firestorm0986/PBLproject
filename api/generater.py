@@ -5,10 +5,10 @@ import random
 
 from model_generaters import *
 
-generate_api = Blueprint('generate_api', __name__,
-                   url_prefix='/api/generate')
+generater_api = Blueprint('generate_api', __name__,
+                   url_prefix='/api/generaters')
 
-api = Api(generate_api)
+api = Api(generater_api)
 
 class QuestionsAPI:
     # not implemented
